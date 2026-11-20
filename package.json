@@ -1,0 +1,28 @@
+{
+  "name": "fertech-gestao",
+  "version": "1.0.0",
+  "description": "Sistema de gestão FERTECH: clientes, pedidos, estoque, serviços, agenda e etiquetas",
+  "main": "main.js",
+  "author": "FERTECH",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "build": {
+    "appId": "br.com.fertech.gestao",
+    "productName": "Gestao FERTECH",
+    "files": ["main.js", "src/**/*"],
+    "win": { "target": "nsis" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
